@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 33906401164408360}
   - component: {fileID: 114692756540099900}
   m_Layer: 0
-  m_Name: 'RyansRig '
+  m_Name: RyansRig 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
