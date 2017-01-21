@@ -3,6 +3,52 @@ guid: 15bcded0eddd19d4081cac7112c44ebe
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: Cube_000
+    100002: Cube_001
+    100004: Cube_002
+    100006: Cube_003
+    100008: Cube_004
+    100010: Cube_005
+    100012: Cube_006
+    100014: Cube_007
+    100016: Cube_008
+    100018: Cube_015
+    100020: Cube_019
+    100022: //RootNode
+    400000: Cube_000
+    400002: Cube_001
+    400004: Cube_002
+    400006: Cube_003
+    400008: Cube_004
+    400010: Cube_005
+    400012: Cube_006
+    400014: Cube_007
+    400016: Cube_008
+    400018: Cube_015
+    400020: Cube_019
+    400022: //RootNode
+    2300000: Cube_000
+    2300002: Cube_001
+    2300004: Cube_002
+    2300006: Cube_003
+    2300008: Cube_004
+    2300010: Cube_005
+    2300012: Cube_006
+    2300014: Cube_007
+    2300016: Cube_008
+    2300018: Cube_015
+    2300020: Cube_019
+    3300000: Cube_000
+    3300002: Cube_001
+    3300004: Cube_002
+    3300006: Cube_003
+    3300008: Cube_004
+    3300010: Cube_005
+    3300012: Cube_006
+    3300014: Cube_007
+    3300016: Cube_008
+    3300018: Cube_015
+    3300020: Cube_019
     4300000: Cube_010
     4300002: Cube_009
     4300004: Cube_002
@@ -21,6 +67,8 @@ ModelImporter:
     4300030: Cube_007
     4300032: Cube_019
     4300034: Cube_000
+    4300036: Cube_005
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3
