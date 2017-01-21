@@ -1,0 +1,22 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WandController : SteamVR_TrackedController {
+
+	// Use this for initialization
+	protected override void Start () {
+		base.Start ();
+	}
+	
+	// Update is called once per frame
+	protected override void Update () {
+		base.Update ();
+	}
+
+	public override void OnTriggerClicked(ClickedEventArgs e)
+	{
+		base.OnTriggerClicked (e);
+	}
+
+}
