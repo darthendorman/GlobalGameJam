@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WandController : SteamVR_TrackedController {
-
+    public Vector3 pPos;
+    public Vector3 pos;
+    public float charge;
+    public float max;
+    public float targetDistance;
 	//Use the bullet prefab from the Component Inspector
 	public GameObject Bullet; 
 
