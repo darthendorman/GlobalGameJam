@@ -459,7 +459,7 @@ PlayerSettings:
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
   cloudServicesEnabled:
-    UNet: 0
+    UNet: 1
   cloudProjectId: 
   projectName: 
   organizationId: 
