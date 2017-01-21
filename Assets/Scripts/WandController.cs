@@ -25,6 +25,7 @@ public class WandController : SteamVR_TrackedController {
 		base.Start ();
         targetDistance = .75f;
         charge = 0;
+        distance = 0;
         
         
 	}
@@ -43,11 +44,11 @@ public class WandController : SteamVR_TrackedController {
 
     void updateBar(GameObject bar)
     {
-<<<<<<< HEAD
-        chargeBar.transform.localScale = new Vector3( (distance / targetDistance), transform.localScale.y, transform.localScale.z);
-=======
-        chargeBar.transform.localScale = new Vector3(.15f * (distance / targetDistance), transform.localScale.y,transform.localScale.z);
->>>>>>> parent of 6636762... ????
+
+        chargeBar.transform.localScale = new Vector3( .15f * (distance / targetDistance), transform.localScale.y, transform.localScale.z);
+
+        
+
     }
 
 	public override void OnTriggerClicked(ClickedEventArgs e)
