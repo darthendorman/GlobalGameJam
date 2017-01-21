@@ -9,25 +9,35 @@ public class GameController : MonoBehaviour {
 	public float spawnTime;            // How long between each spawn
 	public int numberMultiplierPerWave;
 	public Transform[] spawnPoints;
+    public GameObject text;
 
 	private int waveNumber = 0;
 
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating ("SpawnRandom", spawnTime, spawnTime);
+
 	}
 
 	public void SpawnRandom()
 	{
 		waveNumber++;
 
-		// TODO: Implement HUD to say "Wave X start"
+        //displayes waveNumbers to face
+        displayWaveNumber(waveNumber);
+		
 
 		for (int i = 0; i < waveNumber * numberMultiplierPerWave; i++) {
 			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 			Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
 		}
 	}
+
+
+    void displayWaveNumber(int wave)
+    {
+
+    }
 	
 	
 	// Update is called once per frame
