@@ -18,4 +18,16 @@ public class AI : MonoBehaviour {
 		agent.SetDestination(destination.position);
 	}
 
+	void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.name == "bullet") {
+			gameObject.GetComponent<Renderer>().material.color = Color.red;
+			Destroy (this);
+		}
+	}
+
+	void OnTriggerEnter(Collider collider)
+	{
+		gameObject.GetComponent<Renderer>().material.color = Color.blue;
+	}
 }
