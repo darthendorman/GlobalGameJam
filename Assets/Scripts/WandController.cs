@@ -13,4 +13,10 @@ public class WandController : SteamVR_TrackedController {
 	protected override void Update () {
 		base.Update ();
 	}
+
+	public override void OnTriggerClicked(ClickedEventArgs e)
+	{
+		base.OnTriggerClicked (e);
+	}
+
 }
