@@ -1,0 +1,243 @@
+[33mcommit fcb540c15988f11086932b3a7944d479b9c7db58[m
+Merge: 3f57975 ce1b4b4
+Author: Vendeta25 <rhavanas@gmail.com>
+Date:   Sat Jan 21 15:57:37 2017 -0500
+
+    Merge branch 'Ryan' of https://github.com/darthendorman/GlobalGameJam into Ryan
+
+[33mcommit 3f57975fb7adb4a55a3465fb426b27881196b28a[m
+Author: Vendeta25 <rhavanas@gmail.com>
+Date:   Sat Jan 21 15:57:32 2017 -0500
+
+    Fixing probelms
+
+[33mcommit ce1b4b4c4cce1430401d1a294c3db2296d7603b5[m
+Merge: d5623e2 0b9be00
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 15:55:15 2017 -0500
+
+    Merge branch 'master' into Ryan
+
+[33mcommit 0b9be005bd5360505ecb0df186c1db58decc9807[m
+Author: Vendeta25 <rhavanas@gmail.com>
+Date:   Sat Jan 21 15:47:15 2017 -0500
+
+    TEst master commit
+
+[33mcommit d5623e24c565b78b04e38132e260855cb611ba9f[m
+Author: Vendeta25 <rhavanas@gmail.com>
+Date:   Sat Jan 21 15:40:48 2017 -0500
+
+    Second Charge Implimentation
+    
+    hopefully fixes scale point and size
+
+[33mcommit 6636762095d8d9ba4f90956c4da1ab3c64a1d07e[m
+Author: Vendeta25 <rhavanas@gmail.com>
+Date:   Sat Jan 21 15:29:45 2017 -0500
+
+    ????
+
+[33mcommit b42386a5b872ac5dabbdaaaa94afcde9cb6ac7bb[m
+Author: Vendeta25 <rhavanas@gmail.com>
+Date:   Sat Jan 21 15:10:10 2017 -0500
+
+    Charge Bar First Implimentaion
+
+[33mcommit 7454ff52fe3f0d1e6bf582358e0f26372448f20f[m
+Merge: f95dd79 1a116cf
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 14:48:12 2017 -0500
+
+    Merge pull request #7 from darthendorman/Ryan
+    
+    Ryan
+
+[33mcommit 1a116cffd5f5fc94eafb15abb23ecd504d708298[m
+Author: Vendeta25 <rhavanas@gmail.com>
+Date:   Sat Jan 21 14:47:35 2017 -0500
+
+    up one thing
+
+[33mcommit f95dd79a7876b2fbd4732d52ce40cef75c31cde9[m
+Merge: 5366876 28110b6
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 13:36:00 2017 -0500
+
+    Merge pull request #6 from darthendorman/Andrew
+    
+    Collision + Rigidbody
+
+[33mcommit 28110b6c75b215b52e5621d47d12b2a7d427850a[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 13:34:49 2017 -0500
+
+    Collision working
+    
+    Must use rigidbody + collision capsule for Camera(eyes). Must use
+    OnTriggerEnter to deal with collision. See boxcollision script
+
+[33mcommit df1cc7f09a1e82de3dc90af643d68f0ba854c9c2[m
+Author: Dave <ddogclaw@gmail.com>
+Date:   Sat Jan 21 13:26:52 2017 -0500
+
+    Gotchu fam
+
+[33mcommit ddcd7743e0ce16f4fda60cfeab0867ded0d942fd[m
+Author: Vendeta25 <rhavanas@gmail.com>
+Date:   Sat Jan 21 13:10:29 2017 -0500
+
+    Ryan test 3 point 5
+
+[33mcommit 4abe17570c8bbae7dc56753da4fd2d03aa5db5ff[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 12:55:03 2017 -0500
+
+    Health + Box
+
+[33mcommit ce1a39cddfa75689aff01f231214e0f2093d2bcb[m
+Author: Vendeta25 <rhavanas@gmail.com>
+Date:   Sat Jan 21 12:38:09 2017 -0500
+
+    Charging again again...
+
+[33mcommit 9d19ede1d534f6ea5d1e7a62d321d89ad6dde388[m
+Author: Vendeta25 <rhavanas@gmail.com>
+Date:   Sat Jan 21 12:32:59 2017 -0500
+
+    Testing
+
+[33mcommit 95096ffe433e969054330eeff250d9c2f927485e[m
+Merge: d04825f 5366876
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 12:27:05 2017 -0500
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Andrew
+
+[33mcommit 5366876fff961fc11078dae09f0032d4bfe068fd[m
+Merge: d53289d 9a10eb8
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 12:26:07 2017 -0500
+
+    Merge pull request #5 from darthendorman/Andrew
+    
+    Andrew
+
+[33mcommit d04825f18e7178af9d7cb97ad0c0c737c6ddd1f3[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 12:25:43 2017 -0500
+
+    Add Health Bar
+
+[33mcommit 16f4a3f64ba94b454f8554841122b39f7c0a0486[m
+Merge: 9a10eb8 d53289d
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 12:18:19 2017 -0500
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Andrew
+
+[33mcommit 9a10eb84f4ba3f54db322cb5a35dc32c1ff41061[m
+Merge: 90a39e4 88ac0e7
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 12:09:37 2017 -0500
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Andrew
+
+[33mcommit d53289d684337da38e95dd1d8cf6a89872f88cab[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 12:09:28 2017 -0500
+
+    Basic UI + Fixed bullets
+    
+    Added a basic UI for energy over the guns. Has stand in sprites. Should
+    be replaced. Bullets given rigidbody so it can move.
+
+[33mcommit 88ac0e768a508988ebc458805de470f31320c636[m
+Merge: c31e131 90a39e4
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 11:42:04 2017 -0500
+
+    Merge pull request #4 from darthendorman/Andrew
+    
+    Teleport Commit
+
+[33mcommit c31e1311946389b358d4a68af76255a6e8518b3e[m
+Merge: d4d76d8 11f5d2b
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 11:38:07 2017 -0500
+
+    Merge pull request #3 from darthendorman/Andrew
+    
+    Teleport Commit
+
+[33mcommit 90a39e4fdfeb1f9e33c1f83f780293b95fa635f7[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 11:37:51 2017 -0500
+
+    Teleport Commit
+    
+    Fixed up a property in teleport
+
+[33mcommit 11f5d2b6975c73950fc69746e1eda7d7e2e40425[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Sat Jan 21 11:35:58 2017 -0500
+
+    Teleport Commit
+    
+    Teleporting is working
+
+[33mcommit d4d76d8b1bed8dc7d669951543ff6845bd09ac5c[m
+Merge: d2e1fa6 1e7f69c
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Fri Jan 20 23:48:16 2017 -0500
+
+    Merge pull request #2 from darthendorman/Andrew
+    
+    Bullet
+
+[33mcommit d2e1fa6c77d0400039f941418e50ac8ed9267a79[m
+Merge: 31bb593 1a66467
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Fri Jan 20 23:46:51 2017 -0500
+
+    Merge pull request #1 from darthendorman/Andrew
+    
+    Andrew
+
+[33mcommit 1e7f69c94e63f719f2f70229278ff1310557d4ac[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Fri Jan 20 23:46:41 2017 -0500
+
+    Bullet
+    
+    It works!!!!
+
+[33mcommit 1a66467fea4cf995693560c023104ffc40c95a7f[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Fri Jan 20 23:39:27 2017 -0500
+
+    Base Wrapper Class
+    
+    Is working
+
+[33mcommit 017b13e761664a8ba75a439675c139c5305d39c5[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Fri Jan 20 23:33:38 2017 -0500
+
+    Controller Wrapper
+    
+    Made the base controller wrapper
+
+[33mcommit 31bb593086d6d947c82d6ba2793cb1d13b22bb4e[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Fri Jan 20 23:21:59 2017 -0500
+
+    Initial Commit
+    
+    Should be good
+
+[33mcommit a96ed1d7326c15fc5da90bc6e45d7c5fe03e068e[m
+Author: darthendorman <agao.oa@gmail.com>
+Date:   Fri Jan 20 23:20:02 2017 -0500
+
+    :confetti_ball: Added .gitattributes & .gitignore files
