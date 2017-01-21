@@ -14,13 +14,15 @@ public class AI : MonoBehaviour {
 	void Start()
 	{
 		agent = gameObject.GetComponent<NavMeshAgent>();
-		destination = target.transform;
+        target = GameObject.Find("Camera (eye)");
+        destination = target.transform;
+
 		agent.SetDestination(destination.position);
 	}
 
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.name == "Bullet") {
+		if (collision.gameObject.tag == "Bullet") {
 			Destroy (this.gameObject);
 		}
 	}
