@@ -38,7 +38,7 @@ public class WandController : SteamVR_TrackedController {
 	public override void OnTriggerClicked(ClickedEventArgs e)
 	{
 		base.OnTriggerClicked (e);
-        if (distance > .2)
+        if (distance > .75)
         {
             
             Temporary_Bullet = Instantiate(Bullet, this.transform.position, this.transform.rotation) as GameObject;
