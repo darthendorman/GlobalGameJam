@@ -16,6 +16,12 @@ public class OnCollisionBox : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
+        Debug.Log("Entered collision with " + collision.gameObject.name);
 		gameObject.GetComponent<Renderer>().material.color = Color.red;
 	}
+
+    void OnTriggerEnter(Collider collider)
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.blue;
+    }
 }
