@@ -26,4 +26,9 @@ public class playerBehavior : MonoBehaviour {
     {
         health -= damage;
     }
+
+    void onTriggerEnter(Collider col)
+    {
+        takeDamage(25);
+    }
 }
