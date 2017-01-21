@@ -20,7 +20,7 @@ public class AI : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.name == "bullet") {
+		if (collision.gameObject.name == "Bullet") {
 			gameObject.GetComponent<Renderer>().material.color = Color.red;
 			Destroy (this);
 		}
@@ -29,5 +29,6 @@ public class AI : MonoBehaviour {
 	void OnTriggerEnter(Collider collider)
 	{
 		gameObject.GetComponent<Renderer>().material.color = Color.blue;
+		Destroy (this);
 	}
 }
