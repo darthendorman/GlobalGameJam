@@ -134,12 +134,12 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 743166930}
+      objectReference: {fileID: 1188281997}
     - target: {fileID: 33149195132326108, guid: b4082377c7e4e544eb711f0b4664f2de,
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1142985297}
+      objectReference: {fileID: 1188724030}
     - target: {fileID: 114790597749816348, guid: b4082377c7e4e544eb711f0b4664f2de,
         type: 2}
       propertyPath: spawnPoints.Array.data[0]
@@ -160,6 +160,16 @@ Prefab:
       propertyPath: NavmeshAnimator
       value: 
       objectReference: {fileID: 1216462175}
+    - target: {fileID: 114790597749816348, guid: b4082377c7e4e544eb711f0b4664f2de,
+        type: 2}
+      propertyPath: spawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114790597749816348, guid: b4082377c7e4e544eb711f0b4664f2de,
+        type: 2}
+      propertyPath: numberPerWave
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4082377c7e4e544eb711f0b4664f2de, type: 2}
   m_IsPrefabParent: 0
@@ -309,35 +319,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!21 &743166930
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &812523056
 Prefab:
   m_ObjectHideFlags: 0
@@ -380,7 +361,36 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee73c7c5742d0524ea7aa18caf659f3e, type: 2}
   m_IsPrefabParent: 0
---- !u!43 &1142985297
+--- !u!21 &1188281997
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+--- !u!43 &1188724030
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
