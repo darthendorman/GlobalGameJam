@@ -68,6 +68,9 @@ ExportedObj/
 *.svd
 *.pdb
 
+#Scenes
+Main.unity
+
 
 # Unity3D generated meta files
 *.pidb.meta
