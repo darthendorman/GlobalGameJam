@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WandController : SteamVR_TrackedController {
-    public Vector3 pPos;
-    public Vector3 pos;
+    
     public float charge;
     public float max;
+    public float distance;
     public float targetDistance;
-	//Use the bullet prefab from the Component Inspector
-	public GameObject Bullet; 
+    GameObject Temporary_Bullet;
+
+    public SteamVR_Controller.Device controller { get { return SteamVR_Controller.Input((int)controllerIndex); } }
+    public Vector3 velocity { get { return controller.velocity; } }
+    public Vector3 angularVelocity { get { return controller.angularVelocity; } }
+    //Use the bullet prefab from the Component Inspector
+    public GameObject Bullet; 
 
 	//Use the speed of the bullet from the Component Insepctor
 	public float Bullet_Force;
@@ -17,34 +22,28 @@ public class WandController : SteamVR_TrackedController {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
-        max = 100;
-        targetDistance = 20;
-        charge = 0;
-        pPos = this.gameObject.transform.position;
+        
+        
 	}
 	
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update ();
-        float distance = Mathf.Abs(Vector3.Distance(pPos, pos));
-        if (charge < max)
-        {
-            charge += distance / targetDistance;
-        }
-        if(charge == 100)
-        {
-            GameObject Temporary_Bullet1;
-            Temporary_Bullet1 = Instantiate(Bullet, this.transform.position, this.transform.rotation) as GameObject;
-        }
+        distance += controller.velocity.magnitude * Time.deltaTime;
+        
+        
+        
 	}
 
 	public override void OnTriggerClicked(ClickedEventArgs e)
 	{
 		base.OnTriggerClicked (e);
-
-		GameObject Temporary_Bullet;
-		Temporary_Bullet = Instantiate (Bullet, this.transform.position, this.transform.rotation) as GameObject;
-
+        if (distance > .2)
+        {
+            
+            Temporary_Bullet = Instantiate(Bullet, this.transform.position, this.transform.rotation) as GameObject;
+            distance = 0;
+        }
 		Rigidbody Temporary_Rigidbody;
 		Temporary_Rigidbody = Temporary_Bullet.GetComponent<Rigidbody> ();
 
