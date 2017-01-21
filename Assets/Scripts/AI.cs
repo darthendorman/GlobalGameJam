@@ -21,14 +21,14 @@ public class AI : MonoBehaviour {
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.gameObject.name == "Bullet") {
-			gameObject.GetComponent<Renderer>().material.color = Color.red;
-			Destroy (this);
+			Destroy (this.gameObject);
 		}
 	}
 
 	void OnTriggerEnter(Collider collider)
 	{
-		gameObject.GetComponent<Renderer>().material.color = Color.blue;
-		Destroy (this);
+		if (collider.gameObject.name == "Camera (eye)") {
+			Destroy (this.gameObject);
+		}
 	}
 }
