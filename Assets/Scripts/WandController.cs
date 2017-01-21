@@ -17,11 +17,25 @@ public class WandController : SteamVR_TrackedController {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
+        max = 100;
+        targetDistance = 20;
+        charge = 0;
+        pPos = this.gameObject.transform.position;
 	}
 	
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update ();
+        float distance = Mathf.Abs(Vector3.Distance(pPos, pos));
+        if (charge < max)
+        {
+            charge += distance / targetDistance;
+        }
+        if(charge == 100)
+        {
+            GameObject Temporary_Bullet1;
+            Temporary_Bullet1 = Instantiate(Bullet, this.transform.position, this.transform.rotation) as GameObject;
+        }
 	}
 
 	public override void OnTriggerClicked(ClickedEventArgs e)
