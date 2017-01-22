@@ -17,20 +17,23 @@ public class AI : MonoBehaviour {
 
     public GameObject gameController;
 
+    bool running;
 
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         target = GameObject.Find("Camera (eye)");
         destination = target.transform;
-
+        running = gameController.GetComponent<GameController>().running;
         agent.SetDestination(destination.position);
 
     }
 
     void Update()
     {
-		destination = target.transform;
+        running = gameController.GetComponent<GameController>().running;
+        if (running) {
+        destination = target.transform;
 		agent.SetDestination (destination.position);
         
             if (health <= 0)
@@ -38,6 +41,7 @@ public class AI : MonoBehaviour {
                 Die();
             }
         
+        }
     }
 
 

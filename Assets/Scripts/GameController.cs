@@ -15,12 +15,15 @@ public class GameController : MonoBehaviour {
     public GameObject player;
     public bool running;
 	private int waveNumber = 0;
+    public bool menuOn;
+    public GameObject startButton;
 
 	// Use this for initialization
 	void Start () {
         text.GetComponent<Text>();
-        running = true;
+        running = false;
         HUD.SetActive(false);
+        goToMenu();
 		SpawnRandom ();
 		InvokeRepeating ("SpawnRandom", spawnTime, spawnTime);
     }
@@ -42,6 +45,14 @@ public class GameController : MonoBehaviour {
 
 	}
 
+    IEnumerator stall(int secs)
+    {
+       
+        yield return new WaitForSeconds(3);
+        
+
+    }
+
     IEnumerator displayWaveNumber(int waveNumber)
     {
         text.text = "Wave " + waveNumber;
@@ -51,7 +62,19 @@ public class GameController : MonoBehaviour {
         
     }
 
-    
+    public void startGame()
+    {
+        running = true;
+        menuOn = false;
+        startButton.SetActive(menuOn);
+    }
+
+    public void goToMenu()
+    {
+        running = false;
+        menuOn = true;
+        startButton.SetActive(menuOn);
+    }
 	
 	
 	// Update is called once per frame
@@ -66,6 +89,9 @@ public class GameController : MonoBehaviour {
         {
             text.text = "GAME OVER";
             HUD.SetActive(true);
+            StartCoroutine(stall(3));
+            HUD.SetActive(false);
+            goToMenu();
         }
 
     }
