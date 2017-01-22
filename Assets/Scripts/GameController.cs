@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour {
 	public Transform[] spawnPoints;
     public GameObject HUD;
     public Text text;
+    public int score;
+    public Text scoreText;
     public GameObject player;
     public bool running;
 	private int waveNumber = 0;
@@ -27,7 +29,7 @@ public class GameController : MonoBehaviour {
         goToMenu();
 		SpawnRandom ();
 		InvokeRepeating ("SpawnRandom", spawnTime, spawnTime);
-        
+        score = 0;
     }
 
 	public void SpawnRandom()
@@ -95,7 +97,8 @@ public class GameController : MonoBehaviour {
             HUD.SetActive(false);
             goToMenu();
         }
-        
+
+        scoreText.text = "Score: " + score;
 
     }
 }

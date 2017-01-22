@@ -49,6 +49,7 @@ public class AI : MonoBehaviour {
             }
             if (health <= 0)
             {
+                gameController.GetComponent<GameController>().score++;
                 honk.Play();
                 Die();
             }
