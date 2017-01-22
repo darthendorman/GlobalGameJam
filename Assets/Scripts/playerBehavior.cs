@@ -7,6 +7,7 @@ public class playerBehavior : MonoBehaviour {
     public float health;
     public GameObject healthBar;
     float totalHealth;
+    public GameObject gameController;
 	// Use this for initialization
 	void Start () {
         health = 100;
@@ -15,8 +16,10 @@ public class playerBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        updateHealth(healthBar);
-		
+        if (gameController.GetComponent<GameController>().running)
+        {
+            updateHealth(healthBar);
+        }
 	}
 
     void updateHealth(GameObject healthBar)
