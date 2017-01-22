@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		SpawnRandom ();
 		InvokeRepeating ("SpawnRandom", spawnTime, spawnTime);
         text.GetComponent<Text>();
 	}
