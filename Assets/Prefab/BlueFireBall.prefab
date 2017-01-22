@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 82891508187326964}
   m_Layer: 0
   m_Name: BlueFireBall
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 99abee676dbe77c47956d9eaf395e54f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.277
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -154,7 +154,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d715d999bf2cb5340af5bf69db77aaed, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.395
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -345,7 +345,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1483014962240118}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

@@ -31,7 +31,9 @@ public class AI : MonoBehaviour {
         target = GameObject.Find("Camera (eye)");
         destination = target.transform;
         running = gameController.GetComponent<GameController>().running;
-        agent.SetDestination(destination.position);
+        
+        
+        
         sounds = gameObject.GetComponents<AudioSource>();
         honk = sounds[0];
         laugh = sounds[1];
@@ -40,7 +42,7 @@ public class AI : MonoBehaviour {
     void Update()
     {
         float distanceToTarget = Vector3.Distance(destination.position, gameObject.transform.position);
-        
+        agent.SetDestination(destination.position);
         running = gameController.GetComponent<GameController>().running;
         if( distanceToTarget < 3.0f && !laugh.isPlaying)
             {

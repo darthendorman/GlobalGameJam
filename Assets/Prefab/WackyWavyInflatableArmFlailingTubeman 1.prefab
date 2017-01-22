@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 114760442709478704}
   - component: {fileID: 82948576192939210}
   - component: {fileID: 82361479167803316}
+  - component: {fileID: 54141175737469702}
   m_Layer: 0
   m_Name: WackyWavyInflatableArmFlailingTubeman 1
   m_TagString: Untagged
@@ -376,7 +377,7 @@ Transform:
   m_GameObject: {fileID: 1339626551228476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.34, y: -0.28, z: 7.352663}
-  m_LocalScale: {x: 1, y: 0.69, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.69, z: 1}
   m_Children:
   - {fileID: 4856681838244874}
   - {fileID: 4548041085263170}
@@ -453,6 +454,21 @@ Transform:
   m_Father: {fileID: 4086492035525224}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54141175737469702
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1339626551228476}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!65 &65793925746210086
 BoxCollider:
   m_ObjectHideFlags: 1

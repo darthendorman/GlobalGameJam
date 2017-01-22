@@ -16,6 +16,7 @@ public class MenuButton : MonoBehaviour {
 	}
     void onTriggerEnter(Collider col)
     {
+        Debug.Log("Start?");
         gameController.GetComponent<GameController>().startGame();
     }
 }
