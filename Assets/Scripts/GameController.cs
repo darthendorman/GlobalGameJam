@@ -18,25 +18,28 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		SpawnRandom ();
-		InvokeRepeating ("SpawnRandom", spawnTime, spawnTime);
         text.GetComponent<Text>();
         running = true;
         HUD.SetActive(false);
+		SpawnRandom ();
+		InvokeRepeating ("SpawnRandom", spawnTime, spawnTime);
     }
 
 	public void SpawnRandom()
 	{
-		waveNumber++;
-
-        //displayes waveNumbers to face
-        StartCoroutine(displayWaveNumber(waveNumber));
-		
-
-		for (int i = 0; i < waveNumber * numberMultiplierPerWave; i++) {
-			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-			Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+		if (running) {
+			waveNumber++;
+			
+			//displayes waveNumbers to face
+			StartCoroutine(displayWaveNumber(waveNumber));
+			
+			
+			for (int i = 0; i < waveNumber * numberMultiplierPerWave; i++) {
+				int spawnPointIndex = Random.Range (0, spawnPoints.Length);
+				Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+			}
 		}
+
 	}
 
     IEnumerator displayWaveNumber(int waveNumber)
