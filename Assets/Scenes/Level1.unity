@@ -7339,12 +7339,12 @@ Prefab:
     - target: {fileID: 114754580903064928, guid: aab52517c27904540ae34cf3f4f22e73,
         type: 2}
       propertyPath: targetDistance
-      value: 0.75
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 114223379228294674, guid: aab52517c27904540ae34cf3f4f22e73,
         type: 2}
       propertyPath: targetDistance
-      value: 0.75
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 224407723158862198, guid: aab52517c27904540ae34cf3f4f22e73,
         type: 2}
