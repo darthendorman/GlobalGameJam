@@ -10,6 +10,7 @@ public class WandController : SteamVR_TrackedController {
     public float targetDistance;
     GameObject Temporary_Bullet;
     public GameObject chargeBar;
+    
 
     public SteamVR_Controller.Device controller { get { return SteamVR_Controller.Input((int)controllerIndex); } }
     public Vector3 velocity { get { return controller.velocity; } }
@@ -38,6 +39,7 @@ public class WandController : SteamVR_TrackedController {
             distance += controller.velocity.magnitude * Time.deltaTime;
         }
         updateBar(chargeBar);
+        
         
         
 	}
