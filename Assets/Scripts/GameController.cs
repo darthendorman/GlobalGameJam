@@ -70,14 +70,14 @@ public class GameController : MonoBehaviour {
     {
         running = true;
         menuOn = false;
-        startButton.SetActive(menuOn);
+        startButton.SetActive(false);
     }
 
     public void goToMenu()
     {
-        running = false;
         menuOn = true;
-        startButton.SetActive(menuOn);
+        running = false;
+        startButton.SetActive(true);
     }
 	
 	
@@ -89,7 +89,7 @@ public class GameController : MonoBehaviour {
             running = false;
         }
 
-        if(running == false)
+        if(running == false && menuOn == false)
         {
             text.text = "GAME OVER";
             HUD.SetActive(true);

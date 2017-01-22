@@ -33,15 +33,14 @@ public class WandController : SteamVR_TrackedController {
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update ();
-        if (gameController.GetComponent<GameController>().running == true)
-        {
+        
             if (distance < targetDistance)
             {
                 distance += controller.velocity.magnitude * Time.deltaTime;
             }
             updateBar(chargeBar);
 
-        }
+        
         
 	}
 
