@@ -16,19 +16,15 @@ public class playerBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         updateHealth(healthBar);
+		Debug.Log (health);
 	}
 
     void updateHealth(GameObject healthBar)
     {
         healthBar.transform.localScale = new Vector3(health/totalHealth, transform.localScale.y,transform.localScale.z);
     }
-    void takeDamage(float damage)
+    public void takeDamage(float damage)
     {
         health -= damage;
-    }
-
-    void onTriggerEnter(Collider col)
-    {
-        takeDamage(25);
     }
 }

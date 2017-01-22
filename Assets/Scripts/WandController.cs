@@ -24,7 +24,6 @@ public class WandController : SteamVR_TrackedController {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
-        targetDistance = .75f;
         charge = 0;
         distance = 0;
         
@@ -56,10 +55,10 @@ public class WandController : SteamVR_TrackedController {
 	public override void OnTriggerClicked(ClickedEventArgs e)
 	{
 		base.OnTriggerClicked (e);
-        if (distance > .75)
+		if (distance > targetDistance)
         {
-            
             Temporary_Bullet = Instantiate(Bullet, this.transform.position, this.transform.rotation) as GameObject;
+			Temporary_Bullet.gameObject.GetComponent<Bullet> ().setDamage (distance * 100 / targetDistance);
             distance = 0;
         }
 		Rigidbody Temporary_Rigidbody;

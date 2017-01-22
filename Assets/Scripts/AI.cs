@@ -11,6 +11,10 @@ public class AI : MonoBehaviour {
 
 	public GameObject target;
 
+	public float damageDealt;
+
+	public float health;
+
 	void Start()
 	{
 		agent = gameObject.GetComponent<NavMeshAgent>();
@@ -20,16 +24,34 @@ public class AI : MonoBehaviour {
 		agent.SetDestination(destination.position);
 	}
 
+	void Update()
+	{
+		if (health <= 0) {
+			Die ();
+		}
+	}
+
+	public void TakeDamage (float dmg)
+	{
+		this.health -= dmg;
+	}
+
+	void Die()
+	{
+		Destroy (this.gameObject);
+	}
+
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.gameObject.tag == "Bullet") {
-			Destroy (this.gameObject);
+			TakeDamage(collision.gameObject.GetComponent<Bullet> ().getDamage ());
 		}
 	}
 
 	void OnTriggerEnter(Collider collider)
 	{
 		if (collider.gameObject.name == "Camera (eye)") {
+			collider.gameObject.GetComponent <playerBehavior> ().takeDamage (damageDealt);
 			Destroy (this.gameObject);
 		}
 	}
