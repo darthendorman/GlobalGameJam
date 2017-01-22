@@ -29,6 +29,7 @@ public class AI : MonoBehaviour {
 		if (health <= 0) {
 			Die ();
 		}
+		destination = target.transform;
 	}
 
 	public void TakeDamage (float dmg)
