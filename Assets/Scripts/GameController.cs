@@ -83,7 +83,8 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float health = player.GetComponent<playerBehavior>().health;
+        scoreText.text = "Score: " + score;
+        float health = player.GetComponent<playerBehavior>().health;
         if(health < 1)
         {
             running = false;
@@ -98,7 +99,7 @@ public class GameController : MonoBehaviour {
             goToMenu();
         }
 
-        scoreText.text = "Score: " + score;
+        
 
     }
 }
