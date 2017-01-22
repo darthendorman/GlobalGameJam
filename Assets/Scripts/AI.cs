@@ -19,6 +19,12 @@ public class AI : MonoBehaviour {
 
     bool running;
 
+    public AudioSource honk;
+    public AudioSource laugh;
+
+
+    AudioSource[] sounds;
+
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
@@ -26,7 +32,9 @@ public class AI : MonoBehaviour {
         destination = target.transform;
         running = gameController.GetComponent<GameController>().running;
         agent.SetDestination(destination.position);
-
+        sounds = gameObject.GetComponents<AudioSource>();
+        honk = sounds[0];
+        laugh = sounds[1];
     }
 
     void Update()
@@ -35,9 +43,13 @@ public class AI : MonoBehaviour {
         if (running) {
         destination = target.transform;
 		agent.SetDestination (destination.position);
-        
+        if(Vector3.Distance(destination.position,gameObject.transform.position) < 1)
+            {
+                laugh.Play();
+            }
             if (health <= 0)
             {
+                honk.Play();
                 Die();
             }
         

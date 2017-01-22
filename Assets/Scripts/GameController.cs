@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour {
 	private int waveNumber = 0;
     public bool menuOn;
     public GameObject startButton;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,7 @@ public class GameController : MonoBehaviour {
         goToMenu();
 		SpawnRandom ();
 		InvokeRepeating ("SpawnRandom", spawnTime, spawnTime);
+        
     }
 
 	public void SpawnRandom()
@@ -93,6 +95,7 @@ public class GameController : MonoBehaviour {
             HUD.SetActive(false);
             goToMenu();
         }
+        
 
     }
 }
