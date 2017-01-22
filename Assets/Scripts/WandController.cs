@@ -10,7 +10,7 @@ public class WandController : SteamVR_TrackedController {
     public float targetDistance;
     GameObject Temporary_Bullet;
     public GameObject chargeBar;
-    
+    public GameObject gameController;
 
     public SteamVR_Controller.Device controller { get { return SteamVR_Controller.Input((int)controllerIndex); } }
     public Vector3 velocity { get { return controller.velocity; } }
@@ -33,13 +33,15 @@ public class WandController : SteamVR_TrackedController {
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update ();
-        if (distance < targetDistance)
+        if (gameController.GetComponent<GameController>().running == true)
         {
-            distance += controller.velocity.magnitude * Time.deltaTime;
+            if (distance < targetDistance)
+            {
+                distance += controller.velocity.magnitude * Time.deltaTime;
+            }
+            updateBar(chargeBar);
+
         }
-        updateBar(chargeBar);
-        
-        
         
 	}
 

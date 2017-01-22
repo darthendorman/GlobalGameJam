@@ -12,7 +12,8 @@ public class GameController : MonoBehaviour {
 	public Transform[] spawnPoints;
     public GameObject HUD;
     public Text text;
-
+    public GameObject player;
+    public bool running;
 	private int waveNumber = 0;
 
 	// Use this for initialization
@@ -20,7 +21,9 @@ public class GameController : MonoBehaviour {
 		SpawnRandom ();
 		InvokeRepeating ("SpawnRandom", spawnTime, spawnTime);
         text.GetComponent<Text>();
-	}
+        running = true;
+        HUD.SetActive(false);
+    }
 
 	public void SpawnRandom()
 	{
@@ -50,6 +53,17 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+		float health = player.GetComponent<playerBehavior>().health;
+        if(health < 1)
+        {
+            running = false;
+        }
+
+        if(running == false)
+        {
+            text.text = "GAME OVER";
+            HUD.SetActive(true);
+        }
+
+    }
 }
