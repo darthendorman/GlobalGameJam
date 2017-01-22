@@ -32,13 +32,12 @@ public class AI : MonoBehaviour {
     {
 		destination = target.transform;
 		agent.SetDestination (destination.position);
-        if (gameController.GetComponent<GameController>().running)
-        {
+        
             if (health <= 0)
             {
                 Die();
             }
-        }
+        
     }
 
 
