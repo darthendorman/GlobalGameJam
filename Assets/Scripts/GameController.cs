@@ -90,13 +90,15 @@ public class GameController : MonoBehaviour {
             running = false;
         }
 
-        if(running == false && menuOn == false)
+        if(running == false && startButton.active == false)
         {
             text.text = "GAME OVER";
             HUD.SetActive(true);
+            health = 100;
             StartCoroutine(stall(3));
             HUD.SetActive(false);
             goToMenu();
+
         }
 
         

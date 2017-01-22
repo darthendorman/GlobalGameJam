@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
-
-	float damage;
+    public GameObject c;
+     float damage;
 
 	// Use this for initialization
 	void Start () {
+        damage= 100;
 	}
 	
 	// Update is called once per frame
@@ -23,8 +24,16 @@ public class Bullet : MonoBehaviour {
 		return damage;
 	}
 
-	void OnCollisionEnter(Collision collision)
+	void OnCollisionEnter(Collision col)
 	{
-		Destroy (this.gameObject);
+        Debug.Log("Collided");
+        if(col.gameObject.tag == "UI")
+        {
+            c.GetComponent<GameController>().startGame();
+        }
+        
+        Destroy (this.gameObject);
+        
 	}
+    
 }

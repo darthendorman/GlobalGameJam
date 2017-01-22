@@ -14,7 +14,10 @@ public class MenuButton : MonoBehaviour {
 	void Update () {
 		
 	}
-    void onTriggerEnter(Collider col)
+
+    
+
+    void onCollisionEnter(Collider col)
     {
         Debug.Log("Start?");
         gameController.GetComponent<GameController>().startGame();

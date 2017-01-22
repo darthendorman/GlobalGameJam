@@ -74,10 +74,12 @@ public class AI : MonoBehaviour {
         Destroy(this.gameObject);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnColliderEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet") {
             TakeDamage(collision.gameObject.GetComponent<Bullet>().getDamage());
+            //Destroy(this.gameObject);
+            Debug.Log("Hit");
         }
     }
 
@@ -85,9 +87,11 @@ public class AI : MonoBehaviour {
     {
         if (collider.gameObject.name == "Camera (eye)") {
             collider.gameObject.GetComponent<playerBehavior>().takeDamage(damageDealt);
+            honk.Play();
             Destroy(this.gameObject);
         }
-    
+        
+
     }
 
 }
