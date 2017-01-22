@@ -39,14 +39,17 @@ public class AI : MonoBehaviour {
 
     void Update()
     {
+        float distanceToTarget = Vector3.Distance(destination.position, gameObject.transform.position);
+        
         running = gameController.GetComponent<GameController>().running;
+        if( distanceToTarget < 3.0f && !laugh.isPlaying)
+            {
+                
+                laugh.Play();
+            }
         if (running) {
         destination = target.transform;
 		agent.SetDestination (destination.position);
-        if(Vector3.Distance(destination.position,gameObject.transform.position) < 1)
-            {
-                laugh.Play();
-            }
             if (health <= 0)
             {
                 gameController.GetComponent<GameController>().score++;
