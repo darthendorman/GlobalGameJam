@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         text.GetComponent<Text>();
-        running = false;
+        running = true;
         HUD.SetActive(false);
         goToMenu();
 		SpawnRandom ();
