@@ -20,6 +20,6 @@ public class MenuButton : MonoBehaviour {
     void onCollisionEnter(Collider col)
     {
         Debug.Log("Start?");
-        gameController.GetComponent<GameController>().startGame();
+        //gameController.GetComponent<GameController>().startGame();
     }
 }

@@ -24,12 +24,13 @@ public class AI : MonoBehaviour {
 
 
     AudioSource[] sounds;
+    
 
     void Start()
     {
-        agent = gameObject.GetComponent<NavMeshAgent>();
-        target = GameObject.Find("Camera (eye)");
+        
         destination = target.transform;
+        agent = gameObject.GetComponent<NavMeshAgent>();
         running = gameController.GetComponent<GameController>().running;
         
         

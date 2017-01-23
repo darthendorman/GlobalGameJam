@@ -689,10 +689,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
-  target: {fileID: 1093576098393850, guid: aab52517c27904540ae34cf3f4f22e73, type: 2}
+  target: {fileID: 1188601969337792, guid: aab52517c27904540ae34cf3f4f22e73, type: 2}
   damageDealt: 20
   health: 100
-  gameController: {fileID: 1093576098393850, guid: aab52517c27904540ae34cf3f4f22e73,
+  gameController: {fileID: 1188601969337792, guid: aab52517c27904540ae34cf3f4f22e73,
     type: 2}
   honk: {fileID: 0}
   laugh: {fileID: 0}

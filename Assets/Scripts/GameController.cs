@@ -24,10 +24,10 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         text.GetComponent<Text>();
-        running = true;
+        running = false;
         HUD.SetActive(false);
         goToMenu();
-		SpawnRandom ();
+		SpawnRandom();
 		InvokeRepeating ("SpawnRandom", spawnTime, spawnTime);
         score = 0;
     }
@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour {
 	{
 		if (running) {
 			waveNumber++;
-			
+            Debug.Log("1");
 			//displayes waveNumbers to face
 			StartCoroutine(displayWaveNumber(waveNumber));
 			
@@ -68,9 +68,10 @@ public class GameController : MonoBehaviour {
 
     public void startGame()
     {
+        Debug.Log("Starting");
         running = true;
         menuOn = false;
-        startButton.SetActive(false);
+        
     }
 
     public void goToMenu()
@@ -83,11 +84,13 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        gameObject.SetActive(true);
         scoreText.text = "Score: " + score;
         float health = player.GetComponent<playerBehavior>().health;
         if(health < 1)
         {
             running = false;
+            startButton.SetActive(true);
         }
 
         if(running == false && startButton.active == false)

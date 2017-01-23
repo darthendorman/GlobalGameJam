@@ -26,10 +26,11 @@ public class Bullet : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col)
 	{
-        Debug.Log("Collided");
         if(col.gameObject.tag == "UI")
         {
+        Debug.Log("Collided");
             c.GetComponent<GameController>().startGame();
+            c.SetActive(false);
         }
         
         Destroy (this.gameObject);
